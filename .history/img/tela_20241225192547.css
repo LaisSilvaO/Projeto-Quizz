@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(210deg, #00283d, #000508);
+}
+
+main {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  color: white;
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background-color: #000508;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.box2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 5px solid transparent; /* Transparent border to define the area */
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(180deg, #07e2f1, #eb9b05),
+                    linear-gradient(90deg, #07e2f1, #eb9b05);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: snakeMove 4s infinite linear;
+}
+
+/* Animação de "cobrinha" */
+@keyframes snakeMove {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(100%) translateY(0); /* Move para a direita */
+  }
+  50% {
+    transform: translateX(100%) translateY(100%); /* Move para baixo */
+  }
+  75% {
+    transform: translateX(0) translateY(100%); /* Move para a esquerda */
+  }
+  100% {
+    transform: translateX(0) translateY(0); /* Move para cima */
+  }
+}

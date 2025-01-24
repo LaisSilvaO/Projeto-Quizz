@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(210deg, #00283d, #000508);
+}
+
+main {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1{
+  position: relative;
+  width: 700px;
+  height: 410px;
+ 
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+.box2 {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background-color: #000508;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  color: white;
+}
+
+/* Borda animada externa */
+.box1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 0px solid transparent; /* Espessura da borda aumentada */
+  background-image: linear-gradient(to bottom, #157815, #93b608);
+  background-size: 400%; /* Aumenta o tamanho da animação da borda */
+  animation: borderAnimation 6s linear  infinite ;
+  z-index: -1; /* Garante que a borda fique atrás do conteúdo */
+}
+
+@keyframes borderAnimation {
+  0% {
+    top: 0px;
+    left: 0px; 
+}
+25% {
+    top: 0px;
+    left: 700px; /* Canto superior direito */
+}
+50% {
+    top: 0px;
+    left: 0px; /* Canto inferior direito */
+}
+75% {
+    top: 700px;
+    left: 0px; /* Canto inferior esquerdo */
+}
+100% {
+    top: 700px;
+    left: 0px;  /* Retorna ao canto superior esquerdo */
+}
+}
+
+h2{
+  padding: 10px;
+  display: flex;           /* Ativa o modelo de layout flex */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  text-align: center;      /* Centraliza as linhas de texto */
+  height: 40%; 
+}
+h4{
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  gap:10px;
+}
+.qtddquestao{
+  text-align: end;
+}
+.resposta{
+  display: flex;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+button{
+  width: 90px;
+  height: 45px;
+  text-align: start;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(8, 105, 8);
+  color: white;
+}
+
+.final{
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.final button{
+  text-align: center;
+}

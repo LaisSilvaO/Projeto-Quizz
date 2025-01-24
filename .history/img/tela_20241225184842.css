@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(210deg, #00283d, #000508)
+}
+
+main {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  gap: 10px;
+}
+
+.qtddquestao {
+  text-align: end;
+}
+
+.resposta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+button {
+  width: 100px;
+  text-align: start;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+}
+
+.final {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box1{
+  display: flex;
+  width: 100%;
+  height: 100hv;
+  justify-content: center;
+  align-items: center;
+}

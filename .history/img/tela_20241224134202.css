@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: linear-gradient(50deg, rgba(252, 248, 19, 0.9) 0%, rgba(237, 234, 87, 0.932) 100%);
+
+}

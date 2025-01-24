@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(210deg, #00283d, #000508);
+}
+
+main {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  background-color: #000508;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.box2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 10px solid transparent; /* Inicialmente, a borda é transparente */
+  background-image: linear-gradient(45deg, #00ff00, #ff0066, #0066ff, #ffcc00, #00ff00);
+  background-size: 400%; /* Isso ajuda a criar o efeito de movimento */
+  animation: borderAnimation 3s linear infinite;
+  z-index: -1; /* Garantir que a borda esteja atrás do conteúdo */
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 400% 0%;
+  }
+  25% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 400%;
+  }
+  75% {
+    background-position: 400% 400%;
+  }
+  100% {
+    background-position: 400% 0%;
+  }
+}
